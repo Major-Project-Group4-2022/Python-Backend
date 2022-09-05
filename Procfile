@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT AQI.wsgi:application
+web: gunicorn AQI.wsgi --log-file -
