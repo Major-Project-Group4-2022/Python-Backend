@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME' : 'AQI',
         'CLIENT' : {
-            'host' : 'https://weatheraqi.herokuapp.com'
+            'host' : '127.0.0.1:27017'
         }
     }
 }
