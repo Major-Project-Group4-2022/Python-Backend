@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME' : 'AQI',
         'CLIENT' : {
-            'host' : '127.0.0.1:27017'
+            'host' : 'https://weatheraqi.herokuapp.com'
         }
     }
 }
@@ -142,8 +142,8 @@ STATICFILES_DIRS =[
 
 CORS_ALLOWED_ORIGINS = [
 
-    'https://weatheraqi.herokuapp.com/',
-    'http://weatheraqi.herokuapp.com/'
+    'https://weatheraqi.herokuapp.com',
+    'http://weatheraqi.herokuapp.com'
     
 ]
 
