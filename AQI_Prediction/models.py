@@ -1,4 +1,4 @@
-from pickle import TRUE
+
 from django.db import models
 
 # Create your models here.
@@ -8,7 +8,7 @@ class Users(models.Model):
     FirstName=models.CharField(max_length=30)
     LastName=models.CharField(max_length=30)
     MobileNo=models.CharField(max_length=10,primary_key=True)
-    EmailId=models.CharField(max_length=50,unique= True)
+    EmailId=models.EmailField(max_length=50,unique= True)
     UserName=models.CharField(max_length=30,unique=True)
     Password=models.CharField(max_length=30)
 
@@ -24,6 +24,7 @@ class Data(models.Model):
     Wind_speed=models.FloatField() 
     Suspended_windspeed=models.FloatField()
     PM25=models.FloatField()
+    Remarks=models.CharField(max_length=100)
     
 
  
