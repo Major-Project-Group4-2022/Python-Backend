@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from utils.RandomForest import AQI_calculate
+from utils.remarks import remarks
 
 class webscrapping():
     def __init__(self,city):
@@ -25,6 +26,7 @@ class webscrapping():
         suspended_windspeed=15.02
         inputdata=[[average_temp,maximum_temp,minimum_temp,humidity,visibility,windspeed,suspended_windspeed]]
         PM25=AQI_calculate(inputdata)
-        DataDictionary={'Avg_temp':average_temp,'Max_temp':maximum_temp,'Min_temp':minimum_temp,'Humidity':humidity,'Visibility':visibility,'Wind_speed':windspeed,'Suspended_windspeed':suspended_windspeed,'PM25':PM25}
+        Remarks =remarks(PM25)
+        DataDictionary={'Avg_temp':average_temp,'Max_temp':maximum_temp,'Min_temp':minimum_temp,'Humidity':humidity,'Visibility':visibility,'Wind_speed':windspeed,'Suspended_windspeed':suspended_windspeed,'PM25':PM25,'Remarks':Remarks}
         return (DataDictionary)
 

@@ -10,15 +10,12 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 
-  
-
 
 class LoginSerializer(serializers.ModelSerializer):
     UserName = serializers.CharField(max_length=30)
     class Meta:
         model = Users
         fields = ['UserName','Password']
-
 
 
 
