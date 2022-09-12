@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-amrdb4xu-!b2z-v(=s1l+(ef!qh34zqzru5(rc6dtn!0+x=!ef
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aqidjango.herokuapp.com','localhost']
 
 
 # Application definition
@@ -126,9 +126,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-STATIC_URL = 'static/'
+# https://docs.djangoproject.com/en/4.1/howto/static-file
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -144,7 +142,8 @@ STATICFILES_DIRS =[
 
 CORS_ALLOWED_ORIGINS = [
 
-    'http://localhost:3000'
+    'https://weatheraqi.herokuapp.com',
+    'http://weatheraqi.herokuapp.com'
     
 ]
 
@@ -163,3 +162,7 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
      
 }
+
+
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
